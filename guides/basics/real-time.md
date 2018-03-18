@@ -162,9 +162,10 @@ socket.on('messages created', message =>
 socket.emit('create', 'messages', {
   text: 'Hello from socket'
 }, (error, result) => {
-  if (error) throw error});
+  if (error) throw error
+  });
 socket.emit('find', 'messages', (error, messageList) => {
   if (error) throw error
   console.log('Current messages', messageList);  
-});
+  });
 ```
